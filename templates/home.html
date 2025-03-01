@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Comapny Homepage</h1>
+<p>The current date and time is {% now "DATETIME_FORMAT"%}</p>
+<p>there are {{inventory_list|length}} item of inventory.</p>
+<ul>
+    {% for item in inventory_list %}
+    <li>{{item}}</li>
+    {% endfor %}
+</ul>
+<p>{{greeting|title}}</p>
+{%comment%}add more content here !{%endcomment%}
+{% endblock %}
