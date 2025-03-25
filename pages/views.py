@@ -7,6 +7,8 @@ def home_page_view(request):
     "greeting":"THanK you FOR visitiNG.",}
     return render(request,"home.html",context)
 
+# Below we have a class based view
+
 class AboutPageView(TemplateView):
     template_name="about.html"
     def get_context_data(self,**kwargs):
